@@ -1,0 +1,27 @@
+//创建一个应用app，宽度 400、高度 400的显示区域。
+var app = new PIXI.Application(400,400);
+//将应用app的显示区域添加到浏览器中
+document.body.appendChild(app.view);
+
+var bg = new PIXI.Sprite.fromImage("res/bg_02.png");
+//创建一个名称为plane的图片，显示图片的路径：/page2/res/plane_blue_01.png
+var plane = new PIXI.Sprite.fromImage("res/plane_blue_01.png");
+var start = new PIXI.Sprite.fromImage("res/plane/ui/ui_new_battle_png_03.png");
+
+app.stage.addChild(bg);
+app.stage.addChild(start);
+//将图片显示元素 plane ，添加到应用app的舞台中。
+app.stage.addChild(plane);
+
+//创建名称为 defen 的文字显示元素，显示内容为“得分：1000000”
+var defen = new PIXI.Text("得分：1000000");
+//将名为 defen 的文字显示元素，添加到应用 app 的舞台中
+app.stage.addChild(defen);
+//设置字体颜色为白色
+defen.style.fill = 0xffffff;
+
+//设置 defen 的文字显示元素的内容为“飞机大战游戏真好玩！”
+defen.text = "飞机大战游戏真好玩！";
+
+//设置 defen 文本的显示位置
+defen.y = 200;
