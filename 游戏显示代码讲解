@@ -1,0 +1,133 @@
+一、创建应用
+1、创建一个应用    
+
+      var app = new PIXI.Application(500,700);    
+
+      用于创建游戏应用窗口，宽度为：500，高度为：700     
+
+      var app 代表创建了一个名字，叫做app    
+
+      new PIXI.Application(500,700) 代表app是一个应用程序的名字    
+
+
+   
+
+2、将应用显示到浏览器页面    
+
+      document.body.appendChild (app.view);    
+
+      将应用程序在浏览器上显示出来    
+      
+ 二、创建图片
+ 1、创建一个图片        
+
+      var plane = new PIXI.Sprite.fromImage("图片内容来源地址");        
+
+      用于创建一个图片         
+
+
+      res/plane_blue_01.png        
+
+      图片内容来源地址，将这个地址复制到浏览器的地址栏中，既可看到图片。 [查看图片]        
+
+ 
+
+      var plane 代表创建了一个名字，叫做plane        
+
+      new PIXI.Sprite.fromImage("图片内容来源地址") 代表plane是一个图片的名字        
+
+
+
+2、将图片显示在应用程序舞台        
+
+     app.stage.addChild(plane);        
+
+     将名字为plane的图片显示到舞台上 
+
+     app.stage 代表应用程序舞台（所有需要显示的元素，必须都要放到舞台上）        
+
+     app.stage.addChild(plane) 将名称为plane的图片，放到舞台上显示出来    
+     
+     
+     
+三、创建文本
+1、创建一个文本        
+
+      var score = new PIXI.Text(“得分：10000”);        
+
+      用于创建一个文本，文本内容是：“得分：10000” 
+
+      var score 代表创建了一个名字，叫做score        
+
+      new PIXI.Text(“得分：10000”) 代表score是一个文本         
+
+
+2、设置文本水平位置        
+
+     score.x = 100;        
+
+     将名字为score的文本的水平位置设置为100         
+
+
+3、设置文本垂直位置        
+
+      score.y = 200;        
+
+      将名字为score的文本的垂直位置设置为200        
+
+
+4、设置文本显示内容        
+
+      score.text = “飞机大战游戏真好玩！”;        
+
+      将名字为score的文本内容设置为：飞机大战游戏真好玩！        
+
+
+5、设置文本字体颜色        
+
+      score.style.fill = 0xffffff;        
+
+      将名字为score的文本字体颜色设置为：0xffffff白颜色  
+
+
+6、将文本信息显示在应用程序舞台         
+      app.stage.addChild(score);        
+
+      将名字为score的文本显示到舞台上         
+
+      app.stage 代表应用程序舞台(所有需要显示的元素，必须都要放到舞台上)        
+
+      app.stage.addChild(score) 将名称为score的文本，放到舞台上显示出来  
+      
+      
+      
+      
+      扩展知识扩展知识：
+      
+      
+      
+      
+      
+      //创建应用
+var app = new PIXI.Application(400,400);
+document.body.appendChild(app.view);
+
+//创建图片
+var bg = new PIXI.Sprite.fromImage("res/bg_02.png");
+app.stage.addChild(bg);
+
+//创建文本
+var score = new PIXI.Text("得分：10000");
+app.stage.addChild(score);
+上面代码中，我们分别创建了应用、图片和文本， 其中
+
+var app：代表应用的名字
+
+var bg：代表图片的名字
+
+var score：代表文本的名字
+
+我们把这些通过 var 定义的名字，称为变量。变量，是指没有固定的值，可以改变的量。变量也可以简单的理确为是计算机内存中的一个存储空间，主要用于存储程序中的数据。
+
+
+
